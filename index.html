@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora JS</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora javascript</title>
 </head>
 <body>
-    <div id="visor"></div>
-    <table>
-        <tr>
-            <td><button>7</button></td>
-            <td><button>8</button></td>
-            <td><button>9</button></td>
-            <td><button>*</button></td>
-        </tr>
-        <tr>
-            <td><button>4</button></td>
-            <td><button>5</button></td>
-            <td><button>6</button></td>
-            <td><button>/</button></td>
-        </tr>
-        <tr>
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>+</button></td>
-        </tr>
-        <tr>
-            <td><button>0</button></td>
-            <td><button>.</button></td>
-            <td><button>=</button></td>
-            <td><button>-</button></td>
-        </tr>
-    </table>
+    <h2>PROJETO CALCULADORA</h2>
+
+    <div id="output" class="display">0</div>
+    <div>
+        <table>
+            <tr>
+                <td><button class="botao-numerico" onclick="cliqueBotao(7)">7</button></td>
+                <td><button class="botao-numerico" onclick="cliqueBotao(8)">8</button></td>
+                <td><button class="botao-numerico" onclick="cliqueBotao(9)">9</button></td>
+                <td><button class="botao-funcao" onclick="cliqueOperacao('div')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="botao-numerico" onclick="cliqueBotao(4)">4</button></td>
+                <td><button class="botao-numerico" onclick="cliqueBotao(5)">5</button></td>
+                <td><button class="botao-numerico" onclick="cliqueBotao(6)">6</button></td>
+                <td><button class="botao-funcao" onclick="cliqueOperacao('mult')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="botao-numerico" onclick="cliqueBotao(1)">1</button></td>
+                <td><button class="botao-numerico" onclick="cliqueBotao(2)">2</button></td>
+                <td><button class="botao-numerico" onclick="cliqueBotao(3)">3</button></td>
+                <td><button class="botao-funcao" onclick="cliqueOperacao('sub')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="botao-numerico" onclick="cliqueBotao(0)">0</button></td>
+                <td><button class="botao-numerico" onclick="cliquePonto()">.</button></td>
+                <td><button class="botao-numerico" onclick="cliqueOperacao('soma')">+</button></td>
+                <td><button class="botao-resultado" onclick="cliqueIgual()">=</button></td>
+            </tr>
+        </table>
+        <script src="calculadora.js"></script>
+    </div>
 </body>
 </html>
